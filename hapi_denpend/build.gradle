@@ -34,7 +34,7 @@ buildscript {
 
 
 
-version = "1.0.0"    //配置插件的版本号
+version = "1.0.1"    //配置插件的版本号
 group = "com.hapi.denpend"   //插件的群组，插件的classpath会用到
 
 
@@ -42,8 +42,8 @@ group = "com.hapi.denpend"   //插件的群组，插件的classpath会用到
 
 pluginBundle {
     website = 'https://github.com/MJLblabla/HapiDepend'
-    vcsUrl = 'https://github.com/MJLblabla/HapiDepend'
-    description = 'hapi 架构系列依赖统一'  //插件描述
+    vcsUrl = 'git@github.com:MJLblabla/HapiDepend.git'
+    description = 'Hapi architecture unified configuration dependence'  //插件描述
     tags = ['hapi']  //插件的tag。可以通过这个在插件门户上搜索
 
     plugins {
