@@ -2,9 +2,10 @@
    hapi系列架构统一依赖配置
 
 
-   maven { url 'https://jitpack.io' }
-   classpath 'com.github.MJLblabla:HapiDepend:1.0.1'
-   apply plugin: 'hapidepend'
+       maven { url 'https://jitpack.io' }
+       classpath 'com.github.MJLblabla:HapiDepend:1.0.1'
+       apply plugin: 'hapidepend'
+
    
    
    统一编译版本＼suport版本
