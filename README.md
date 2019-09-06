@@ -8,30 +8,27 @@
 
    
    
-   统一编译版本＼suport版本
+   **统一编译版本＼suport版本**
+  
+  
     // =====================================================================
     // ========================== 系统库 ====================================
     // =====================================================================
-   　int compileSdkVersion = 27
-    String buildToolsVersion = '27.0.3'
-
-    int minSdkVersion = 17
-    int targetSdkVersion = 27
-    String supportVersion = '27.1.1'
+   　
     
-    
-android {
-    compileSdkVersion depend.compileSdkVersion
-    defaultConfig {
-        minSdkVersion depend.minSdkVersion
-        targetSdkVersion depend.targetSdkVersion
-        ....
         
-        
-dependencies {
-    implementation depend.constraintLayout()
-    implementation depend.appcompat_v7()
-    .....
+    android {
+        compileSdkVersion depend.compileSdkVersion
+        defaultConfig {
+            minSdkVersion depend.minSdkVersion
+            targetSdkVersion depend.targetSdkVersion
+            ....
+            
+            
+    dependencies {
+        implementation depend.constraintLayout()
+        implementation depend.appcompat_v7()
+        .....
     
     
     // =====================================================================
