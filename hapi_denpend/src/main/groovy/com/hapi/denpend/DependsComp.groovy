@@ -1,34 +1,22 @@
 package com.hapi.denpend
 
 public class DependsComp {
-    int compileSdkVersion = 28
-    String buildToolsVersion = '28.0.3'
+    int compileSdkVersion = 30
+    String buildToolsVersion = "30.0.3"
 
     int minSdkVersion = 17
-    int targetSdkVersion = 28
-    String androidxVersion = "1.1.0"
+    int targetSdkVersion = 30
+    String androidxVersion = "1.2.0"
     String designVersion = "1.0.0"
-    String supportVersion = '28.0.0'
+    //  String supportVersion = '28.0.0'
+
+    def lifecycle_version = "2.3.0"
+    def arch_version = "2.1.0"
 
     boolean latest = true
     boolean thirdPartLatest = false
 
 
-    def support_v4() {
-        return support_v4(supportVersion)
-    }
-
-    def support_v4(String version) {
-        return "com.android.support:support-v4:${version}"
-    }
-
-    def appcompat_v7() {
-        return appcompat_v7(supportVersion)
-    }
-
-    def appcompat_v7(String version) {
-        return "com.android.support:appcompat-v7:${version}"
-    }
 
     def appcompat() {
         return appcompat(androidxVersion)
@@ -47,6 +35,17 @@ public class DependsComp {
     }
 
 
+    def corektx() {
+        return corektx('1.3.2')
+    }
+
+    def corektx(String version) {
+        return "androidx.core:core-ktx:${version}"
+    }
+
+
+
+
     def cardview() {
         return cardview(designVersion)
     }
@@ -56,7 +55,7 @@ public class DependsComp {
     }
 
     def recyclerview() {
-        return recyclerview("1.1.0-rc01")
+        return recyclerview("1.1.0")
     }
 
     def recyclerview(String version) {
@@ -64,7 +63,7 @@ public class DependsComp {
     }
 
     def design() {
-        return design("1.1.0-beta02")
+        return design("1.3.0")
     }
 
     def design(String version) {
@@ -80,23 +79,17 @@ public class DependsComp {
     }
 
     def constraintLayout() {
-        return constraintLayout("1.1.3")
+        return constraintLayout("2.0.4")
     }
 
     def constraintLayout(String version) {
         return "androidx.constraintlayout:constraintlayout:${version}"
     }
 
-    def multidex() {
-        return multidex("2.0.1")
-    }
 
-    def multidex(String version) {
-        return "androidx.multidex:multidex:${version}"
-    }
 
     def fragment() {
-        fragment("1.2.0-rc03")
+        fragment("1.2.5")
     }
 
     def fragment(String version) {
@@ -143,13 +136,52 @@ public class DependsComp {
         return "androidx.annotation:annotation:${version}"
     }
 
+
+    def coroutines() {
+        return coroutines('1.3.9')
+    }
+
+    def coroutines(String version) {
+        return "org.jetbrains.kotlinx:kotlinx-coroutines-android:${version}"
+    }
+
+
+    //jitpack
+
     def lifecycle() {
         return lifecycle("2.1.0")
     }
-
     def lifecycle(String version) {
         return "androidx.lifecycle:lifecycle-extensions:${version}"
     }
+
+
+    def viewModel(){
+        return "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    }
+    def liveData(){
+        return "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    }
+    def runtime_ktx(){
+        return "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    }
+    def viewmodelSavedstate(){
+        return "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    }
+    def viewmodelCompose(){
+        return "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha01"
+    }
+    def lifecycleCompiler(){
+        return "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    }
+
+    def activityKtx(){
+        return "androidx.activity:activity-ktx:1.1.0"
+    }
+    def fragmentKtx(){
+        return "androidx.fragment:fragment-ktx:1.2.5"
+    }
+
 
     def swiperefreshlayout() {
         swiperefreshlayout(designVersion)
@@ -160,7 +192,7 @@ public class DependsComp {
     }
 
     def kotlin() {
-        return kotlin("1.3.61")
+        return kotlin("1.4.0")
     }
 
     def kotlin(String version) {
@@ -176,25 +208,6 @@ public class DependsComp {
         return "org.jetbrains.anko:anko-commons:${version}"
     }
 
-    /**
-     * kotlin和databinding兼容库
-     * @return
-     */
-    def kapt_databinding() {
-        return kapt_databinding("3.5.3")
-    }
-
-    def kapt_databinding(String version) {
-        return "androidx.databinding:databinding-compiler:${version}"
-    }
-
-    def databinding() {
-        return databinding("3.5.3")
-    }
-
-    def databinding(String version) {
-        return "androidx.databinding :databinding-common:${version}"
-    }
 
 
     // =====================================================================
