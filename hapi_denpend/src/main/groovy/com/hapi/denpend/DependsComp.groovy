@@ -4,7 +4,7 @@ public class DependsComp {
     int compileSdkVersion = 30
     String buildToolsVersion = "30.0.3"
 
-    int minSdkVersion = 17
+    int minSdkVersion = 21
     int targetSdkVersion = 30
     String androidxVersion = "1.2.0"
     String designVersion = "1.0.0"
